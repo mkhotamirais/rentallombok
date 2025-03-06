@@ -1,7 +1,4 @@
-<a href="{{ route('home') }}" class="h-12 flex items-center w-fit">
-    <img src="{{ asset('storage/img/rental_lombok_icon.svg') }}" alt="Logo Rental Lombok" class="w-full h-full">
-    {{-- <div class="flex flex-col *:leading-none"> --}}
-    <span class="text-orange-500 text-2xl font-bold tracking-tighter">Rental</span>
-    <span class="text-blue-500 text-2xl font-bold tracking-tighter">Lombok</span>
-    {{-- </div> --}}
+<a href="{{ route('home') }}" class="flex items-center h-12 gap-2">
+    <img src="{{ asset('storage/img/logo_rentallombok_removebg.png') }}" alt="Logo Rental Lombok" class="w-full h-full">
+    <span class="text-blue-800 text-2xl font-bold tracking-tighter">RentalLombok</span>
 </a>

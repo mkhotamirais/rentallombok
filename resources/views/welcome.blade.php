@@ -17,7 +17,7 @@
                     <h1 class="text-5xl lg:text-7xl font-semibold text-white">{{ __('common.home.hero.title') }}</h1>
                     <p class="text-base lg:text-xl text-white">{{ __('common.home.hero.description') }}</p>
                     <a href="{{ config('common.links.whatsapp.url') }}"
-                        class="py-4 px-6 border-2 inline-block text-base lg:text-lg rounded-full bg-orange-500/80 hover:bg-orange-500/50 transition-all border-orange-500 text-white">{{ __('common.common.contact-us') }}
+                        class="py-4 px-6 inline-block text-base lg:text-lg rounded-full bg-blue-800 hover:bg-blue-900 transition-all text-white">{{ __('common.common.contact-us') }}
                         :
                         {{ config('common.links.whatsapp.label') }}</a>
                 </div>
@@ -52,8 +52,8 @@
                     </div>
                 </div>
                 <div class="flex justify-center mt-4">
-                    <a href="{{ route('vehicle-rental') }}"
-                        class="py-3 px-6 w-fit rounded-full border-2 border-orange-500 text-orange-500 text-lg font-semibold hover:text-orange-600 hover:border-orange-600 transition-all">{{ __('common.common.view-all') }}</a>
+                    <a href="{{ route('blog') }}"
+                        class="py-3 px-6 w-fit rounded-full border-2 border-blue-800 text-blue-800 text-lg font-semibold hover:text-blue-900 hover:border-blue-900 transition-all">{{ __('common.common.view-all') }}</a>
                 </div>
                 <script>
                     new Swiper(".card-wrapper", {
@@ -93,13 +93,13 @@
         </div>
     </section> --}}
     {{-- Contact --}}
-    <section id="contact" class="py-12 bg-orange-500 text-white">
+    <section id="contact" class="py-12 bg-blue-800 text-white">
         <div class="container">
             {{-- <h2 class="title">Contact</h2> --}}
             <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
                 <p class="text-center lg:text-left max-w-xl text-2xl">{{ __('common.home.contact.description') }}</p>
                 <a href="{{ config('common.links.whatsapp.url') }}"
-                    class="py-4 px-6 border-2 inline-block text-lg rounded-full bg-white transition-all text-orange-500 font-semibold hover:text-orange-600">{{ __('common.common.contact-us') }}</a>
+                    class="py-4 px-6 border-2 inline-block text-lg rounded-full bg-white transition-all text-blue-500 font-semibold hover:text-blue-800">{{ __('common.common.contact-us') }}</a>
             </div>
         </div>
     </section>
@@ -116,7 +116,7 @@
                             alt="{{ $item->title }}"
                             class="{{ $item->banner ? 'object-cover' : 'object-contain scale-90' }} h-56 w-full z-40 rounded-lg mb-2">
                         <a href="{{ route('blogs.show', $item->slug) }}" class="grow hover:underline">
-                            <h3 class="text-orange-500 my-2 font-semibold text-lg w-fit first-letter:capitalize">
+                            <h3 class="text-gray-700 my-2 font-semibold text-lg w-fit first-letter:capitalize">
                                 {{ Str::limit($item->title, 75) }}</h3>
                         </a>
                         {{-- <a href="{{ route('blogs.show', $item->slug) }}" class="btn !w-fit mt-2">Selengkapnya</a> --}}
@@ -125,7 +125,7 @@
             </div>
             <div class="flex justify-center mt-4">
                 <a href="{{ route('blog') }}"
-                    class="py-3 px-6 w-fit rounded-full border-2 border-orange-500 text-orange-500 text-lg font-semibold hover:text-orange-600 hover:border-orange-600 transition-all">{{ __('common.common.view-all') }}</a>
+                    class="py-3 px-6 w-fit rounded-full border-2 border-blue-800 text-blue-800 text-lg font-semibold hover:text-blue-900 hover:border-blue-900 transition-all">{{ __('common.common.view-all') }}</a>
             </div>
         </div>
     </section>

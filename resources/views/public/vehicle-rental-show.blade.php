@@ -3,7 +3,7 @@
     __('common.meta.vehicle-rental-show.title.1')" :description="__('common.meta.vehicle-rental-show.description.0') .
     $vehicle->brand_name .
     __('common.meta.vehicle-rental-show.description.1')">
-    <section class="lg:max-w-6xl lg:mx-auto px-0 sm:px-4 lg:px-8 pb-16 pt-16 lg:pt-32">
+    <section class="lg:max-w-6xl lg:mx-auto px-0 sm:px-4 lg:px-8 py-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-[20vh]">
             <div class="h-auto">
                 <img src="{{ $vehicle->banner ? asset('storage/' . $vehicle->banner) : asset('storage/svg/panorama_icon.svg') }}"
@@ -41,7 +41,7 @@
     <section class="container">
         <div class="flex justify-between items-center py-2 mt-4 mb-2">
             <h2 class="text-2xl font-semibold">{{ __('common.common.others') }}</h2>
-            <a href="{{ route('vehicle-rental') }}" class="text-orange-500 hover:text-orange-600 transition-all">
+            <a href="{{ route('vehicle-rental') }}" class="text-blue-800 hover:text-blue-900 transition-all">
                 <x-heroicon-c-arrow-right class="size-7" />
             </a>
         </div>

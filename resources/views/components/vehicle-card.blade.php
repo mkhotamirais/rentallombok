@@ -27,7 +27,7 @@
             <a href="{{ config('common.links.whatsapp.url') }}" class="btn w-fit">
                 <x-fab-whatsapp />
                 {{ __('common.common.order') }}</a>
-            <a href="{{ route('vehicles.show', $vehicle) }}" class="text-orange-500 hover:underline">Detail</a>
+            <a href="{{ route('vehicles.show', $vehicle) }}" class="text-blue-800 hover:underline">Detail</a>
         </div>
     </div>
 

@@ -20,6 +20,12 @@ body {
     @apply font-sans;
 }
 
+/* alpine */
+[x-cloak] {
+    display: none !important;
+}
+/* end alpine */
+
 a,
 button {
     @apply cursor-pointer;
@@ -30,11 +36,7 @@ button {
 }
 
 .footer-title {
-    @apply text-lg font-semibold text-orange-500 mb-4;
-}
-
-.btn {
-    @apply text-white bg-orange-500 hover:bg-orange-600 transition py-2 px-4 rounded-lg;
+    @apply text-lg font-semibold text-blue-800 mb-4;
 }
 
 h2.title {
@@ -44,7 +46,7 @@ h2.title {
 h2.title::before,
 h2.title::after {
     content: "";
-    @apply h-1 w-8 bg-orange-500;
+    @apply h-[3px] w-8 bg-blue-500;
 }
 
 p.description {
@@ -99,7 +101,7 @@ p.error {
 }
 
 .btn {
-    @apply font-medium rounded-full py-2 px-4 lg:px-6 bg-orange-500 hover:bg-orange-600 flex gap-2 items-center justify-center transition text-white;
+    @apply font-medium rounded-full py-2 px-4 lg:px-6 bg-blue-800 hover:bg-blue-900 flex gap-2 items-center justify-center transition text-white;
 }
 
 .text-content p {
@@ -111,7 +113,7 @@ p.error {
     height: 13px;
     width: 13px;
     opacity: 0.5;
-    @apply bg-orange-500;
+    @apply bg-blue-800;
 }
 
 .card-wrapper .swiper-pagination-bullet-active {
@@ -119,11 +121,11 @@ p.error {
 }
 
 /* .card-wrapper .swiper-slide-button {
-    @apply text-orange-500 w-8 h-8;
+    @apply text-blue-800 w-8 h-8;
 } */
 
 .card-wrapper .swiper-slide-button::after {
-    @apply text-orange-500 text-4xl font-medium;
+    @apply text-blue-800 text-4xl font-medium;
 }
 
 /* @media screen and (max-width: 768px) {

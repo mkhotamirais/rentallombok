@@ -1,8 +1,8 @@
 <x-layout :title="Str::words($blog->title, 10, '...')" description="{!! Str::words(strip_tags(html_entity_decode($blog->content)), 25, '...') !!}">
-    <section class="section">
+    <section class="py-12">
         <div class="container">
             <div class="flex flex-col lg:flex-row gap-14 items-start">
-                <div class="mt-24">
+                <div class="">
                     <div class="mb-8 text-center">
                         <h1 class="first-letter:capitalize text-2xl lg:text-4xl font-semibold leading-snug mb-2">
                             {{ $blog->title }}
