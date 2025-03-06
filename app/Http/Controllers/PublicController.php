@@ -18,7 +18,13 @@ class PublicController extends Controller
 
     public function vehicle_rental(Request $request)
     {
-        $vehicles = Vehicle::latest();
+        // $vehicles = Vehicle::latest();
+        // Mulai query dengan mengutamakan kategori "lepas kunci"
+        $vehicles = Vehicle::with('vehiclecat')
+            ->select('vehicles.*')
+            ->join('vehiclecats', 'vehicles.vehiclecat_id', '=', 'vehiclecats.id')
+            ->orderByRaw("CASE WHEN vehiclecats.slug = 'lepas-kunci' THEN 0 ELSE 1 END")
+            ->latest();
 
         $search = $request->search;
 
