@@ -10,6 +10,7 @@ return [
         "others" => "Lainnya",
         "view-all" => "Lihat Semua",
         "search-result" => "Pencarian untuk",
+        "all-categories" => "Semua Kategori",
     ],
     "menu" => [
         ["label" => "Beranda", "url" => "/"],

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Vehicle;
+use App\Models\Vehiclecat;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -19,6 +20,10 @@ class PublicController extends Controller
     public function vehicle_rental(Request $request)
     {
         // $vehicles = Vehicle::latest();
+        $search = $request->search;
+        $category_slug = $request->category;
+        $vehiclecats = Vehiclecat::all();
+
         // Mulai query dengan mengutamakan kategori "lepas kunci"
         $vehicles = Vehicle::with('vehiclecat')
             ->select('vehicles.*')
@@ -26,15 +31,19 @@ class PublicController extends Controller
             ->orderByRaw("CASE WHEN vehiclecats.slug = 'lepas-kunci' THEN 0 ELSE 1 END")
             ->latest();
 
-        $search = $request->search;
-
         if ($search) {
             $vehicles = $vehicles->where('brand_name', 'like', "%$search%");
         }
 
+        if ($category_slug) {
+            $vehicles = $vehicles->whereHas('vehiclecat', function ($query) use ($category_slug) {
+                $query->where('slug', $category_slug);  // Mencocokkan slug kategori
+            });
+        }
+
         $vehicles = $vehicles->paginate(8);
 
-        return view('public.vehicle-rental', compact('vehicles', 'search'));
+        return view('public.vehicle-rental', compact('vehicles', 'search', 'vehiclecats'));
     }
 
     public function blog(Request $request)

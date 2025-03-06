@@ -18,7 +18,7 @@
                     <p class="text-2xl mb-4 font-semibold">Rp{{ number_format($vehicle->rental_price, 0, ',', '.') }}
                     </p>
 
-                    <p class="border-l-2 pl-2 border-orange-500 capitalize">
+                    <p class="border-l-2 pl-2 border-blue-500 capitalize">
                         {{ $vehicle->vehiclecat->name }}</p>
                 </div>
                 <div>

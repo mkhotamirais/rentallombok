@@ -10,6 +10,7 @@ return [
         "others" => "Others",
         "view-all" => "View All",
         "search-result" => "Search for",
+        "all-categories" => "All Categories",
     ],
     "menu" => [
         ["label" => "Home", "url" => "/"],
