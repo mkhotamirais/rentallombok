@@ -1,5 +1,5 @@
 <x-layout>
-    <section id="hero" class="min-h-screen">
+    <section id="hero" class="h-screen">
         {{-- <img src="{{ asset('storage/img/rentallombok_hero2.jpg') }}" alt="rental lombok hero image"
             class="z-10 absolute object-center object-cover w-full h-full"> --}}
         <img src="{{ asset('storage/img/rentallombok_hero2_small.jpg') }}"

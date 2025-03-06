@@ -45,7 +45,7 @@
                 <x-heroicon-c-arrow-right class="size-7" />
             </a>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-4 mb-8">
             @foreach ($otherVehicles as $vehicle)
                 <x-vehicle-card :vehicle="$vehicle"></x-vehicle-card>
             @endforeach
