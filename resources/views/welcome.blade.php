@@ -1,5 +1,5 @@
 <x-layout>
-    <section id="hero" class="h-screen">
+    <section id="hero" class="min-h-screen relative">
         {{-- <img src="{{ asset('storage/img/rentallombok_hero2.jpg') }}" alt="rental lombok hero image"
             class="z-10 absolute object-center object-cover w-full h-full"> --}}
         <img src="{{ asset('storage/img/rentallombok_hero2_small.jpg') }}"
@@ -11,7 +11,7 @@
                 this.dataset.src = ''; 
             }">
 
-        <div class="z-20 relative h-screen bg-gradient-to-b from-black/50 to-black/50">
+        <div class="z-20 relative h-screen bg-black/50">
             <div class="container flex items-center">
                 <div class="text-center sm:text-left max-w-3xl space-y-8">
                     <h1 class="text-5xl lg:text-7xl font-semibold text-white">{{ __('common.home.hero.title') }}</h1>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center mt-4">
-                    <a href="{{ route('blog') }}"
+                    <a href="{{ route('vehicle-rental') }}"
                         class="py-3 px-6 w-fit rounded-full border-2 border-blue-800 text-blue-800 text-lg font-semibold hover:text-blue-900 hover:border-blue-900 transition-all">{{ __('common.common.view-all') }}</a>
                 </div>
                 <script>
