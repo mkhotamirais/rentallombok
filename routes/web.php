@@ -34,5 +34,6 @@ Route::middleware([LocaleMiddleware::class])->group(function () {
 
 Route::get('/locale/{locale}', function ($locale) {
     session(['locale' =>  $locale]);
-    return back();
+    return redirect()->secure(url()->previous());
+    // return back();
 })->name('locale');
