@@ -28,8 +28,10 @@ class PublicController extends Controller
         $vehicles = Vehicle::with('vehiclecat')
             ->select('vehicles.*')
             ->join('vehiclecats', 'vehicles.vehiclecat_id', '=', 'vehiclecats.id')
-            ->orderByRaw("CASE WHEN vehiclecats.slug = 'lepas-kunci' THEN 0 ELSE 1 END")
-            ->latest();
+            ->orderByRaw("
+            CASE WHEN vehiclecats.slug = 'lepas-kunci' THEN 0 ELSE 1 END, 
+            vehicles.rental_price ASC
+        ");
 
         if ($search) {
             $vehicles = $vehicles->where('brand_name', 'like', "%$search%");
