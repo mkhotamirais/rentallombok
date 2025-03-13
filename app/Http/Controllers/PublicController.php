@@ -11,7 +11,8 @@ class PublicController extends Controller
 {
     public function index()
     {
-        $vehicles = Vehicle::latest()->get();
+        // $vehicles = Vehicle::latest()->get();
+        $vehicles = Vehicle::orderBy('rental_price', 'asc')->get();
         $blogs = Blog::latest()->take(4)->get();
 
         return view('welcome', compact('vehicles', 'blogs'));
