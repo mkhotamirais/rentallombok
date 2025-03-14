@@ -2,7 +2,7 @@
     <section id="hero" class="min-h-screen relative">
         {{-- <img src="{{ asset('storage/img/rentallombok_hero2.jpg') }}" alt="rental lombok hero image"
             class="z-10 absolute object-center object-cover w-full h-full"> --}}
-        <img src="{{ asset('storage/img/rentallombok-hero-image-small.jpg') }}"
+        <img src="{{ asset('storage/img/rentallombok-hero-image-small.jpg') }}" width="100%" height="100%"
             data-src="{{ asset('storage/img/rentallombok-hero-image.jpg') }}" alt="rental lombok hero image"
             class="z-10 absolute object-center object-cover w-full h-full blur-lg transition-all duration-500 ease-in-out"
             onload="if (this.dataset.src && this.src !== this.dataset.src) { 
