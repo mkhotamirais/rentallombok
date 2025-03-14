@@ -24,6 +24,7 @@ class PublicController extends Controller
         $search = $request->search;
         $category_slug = $request->category;
         $vehiclecats = Vehiclecat::all();
+        $blogs = Blog::latest()->take(4)->get();
 
         // Mulai query dengan mengutamakan kategori "lepas kunci"
         $vehicles = Vehicle::with('vehiclecat')
@@ -46,7 +47,7 @@ class PublicController extends Controller
 
         $vehicles = $vehicles->paginate(8);
 
-        return view('public.vehicle-rental', compact('vehicles', 'search', 'vehiclecats'));
+        return view('public.vehicle-rental', compact('vehicles', 'blogs', 'search', 'vehiclecats'));
     }
 
     public function blog(Request $request)

@@ -41,4 +41,5 @@
             </div>
         </div>
     </section>
+    <x-blog-section :blogs="$blogs" bg="bg-gray-50" />
 </x-layout>
